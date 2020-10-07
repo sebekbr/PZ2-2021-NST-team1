@@ -3,6 +3,13 @@
 Parking Management System by SKS
 ---
 
+Clone repository:
+```
+git clone https://github.com/Delor4/Carceres.git
+cd Carceres
+git submodule update --init --recursive
+```
+
 RESTful HTTP API using [Flask](https://github.com/pallets/flask), [Flask-Restful](https://github.com/flask-restful/flask-restful) and [SQLAlchemy](https://github.com/zzzeek/sqlalchemy)
 -------------------
 
