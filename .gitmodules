@@ -1,0 +1,9 @@
+[submodule "app"]
+	path = app
+	url = https://github.com/Delor4/CarceresBE
+[submodule "carceres"]
+	path = carceres
+	url = https://github.com/Delor4/CarceresFE
+[submodule "docker"]
+	path = docker
+	url = https://github.com/Delor4/CarceresC
