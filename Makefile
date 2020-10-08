@@ -1,9 +1,13 @@
-
 DOCKER_DIR = docker
 BACK_DIR = app
 FRONT_DIR = carceres
 
-.PHONY: all clean_docker build_back build_front docker_compose docker_restart
+CMDS = help all clean_docker build_back build_front docker_compose docker_restart run_front run_back
+
+.PHONY: $(CMDS)
+
+help:
+	@echo Possible targets: $(CMDS)
 
 all: clean_docker build_back build_front docker_compose docker_restart
 
@@ -27,3 +31,9 @@ docker_compose:
 
 docker_restart:
 	$(MAKE) -C $(DOCKER_DIR) restart
+
+run_front:
+	$(MAKE) -C $(FRONT_DIR) run
+
+run_back:
+	$(MAKE) -C $(BACK_DIR) run
