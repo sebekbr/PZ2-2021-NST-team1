@@ -12,6 +12,11 @@ git submodule update --init --recursive
 
 RESTful HTTP API using [Flask](https://github.com/pallets/flask), [Flask-Restful](https://github.com/flask-restful/flask-restful) and [SQLAlchemy](https://github.com/zzzeek/sqlalchemy)
 -------------------
+You need:
+
+- [Python](https://www.python.org/) ver. min. 3.6
+- [pip](https://pypi.org/project/pip/)
+- (optional) [virtualenv](https://pypi.org/project/virtualenv/)
 
 ```
 cd app
@@ -19,7 +24,7 @@ cd app
 
 - Install requisite packages:
 ```shell
-$ pip install -r requirements.txt
+$ make install
 ```
 
 - Create tables:
@@ -29,16 +34,20 @@ $ make init_db
 
 - Run service:
 ```shell
-$ python app.py
+$ make run
 ```
-- List of endpoints:
-- `/api/users`
-    (Methods: `GET` `POST` `GET /<id>` `PUT /<id>` `DELETE /<id>`)
 
-Don't forget add "Content-Type: application/json" header to your request!
+More info: [CarceresBE](https://github.com/Delor4/CarceresBE)
+
+---
 
 Frontend using [Vue.js](https://vuejs.org/) and [Bootstrap](https://getbootstrap.com/)
----
+----
+
+You need:
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
 
 ```
 $ cd carceres
@@ -51,28 +60,36 @@ $ npm install
 
 - Run site:
 ```
-$ npm run serve
+$ make run
 ```
 
-- Build static files:
+- (Optional) Build static files:
 ```shell
-$ npm run build
+$ make build
 ```
+
+More info: [CarceresFE](https://github.com/Delor4/CarceresFE)
+
+---
 
 Conteners by [Docker](https://www.docker.com/)
 -----
 
 - Make and run docker image
 ```shell
-# make all
+$ make all
 ```
 
 To update database in docker image:
 
 ```shell
-# docker exec -it <image_name> /bin/bash`
+$ docker exec -it <image_name> /bin/bash`
 ```
 and then
 ```shell
-$ python create_db.py
+$ make init_db
 ```
+
+More info: [CarceresC](https://github.com/Delor4/CarceresC)
+
+---
