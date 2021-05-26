@@ -7,3 +7,6 @@
 [submodule "docker"]
 	path = docker
 	url = https://github.com/Delor4/CarceresC
+[submodule "mobile"]
+	path = mobile
+	url = https://github.com/entaro111/Carceres_Android
